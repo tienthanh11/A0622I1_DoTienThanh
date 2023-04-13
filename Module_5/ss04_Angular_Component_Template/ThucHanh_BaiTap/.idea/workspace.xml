@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="386f9242-35c7-4ffe-9271-f33c7e3d3648" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/ThucHanh_BaiTap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/article/ArticleDao.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/article/IArticle.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/article/article.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/article/article.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/article/article.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/footer/footer.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/footer/footer.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/footer/footer.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/like/like.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/like/like.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/like/like.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/navbar/navbar.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/navbar/navbar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/app/navbar/navbar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-hackernews-app/tslint.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2OLxlc000GCGytAVlP4EnYjNvVX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="ts.external.directory.path" value="D:\Codegym_DaNang\A0622I1_DoTienThanh\Module_5\ss04_Angular_Component_Template\ThucHanh_BaiTap\angular-hackernews-app\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Codegym_DaNang\A0622I1_DoTienThanh\Module_5\ss04_Angular_Component_Template\ThucHanh_BaiTap\angular-hackernews-app\src\app\article" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="386f9242-35c7-4ffe-9271-f33c7e3d3648" name="Default Changelist" comment="" />
+      <created>1681353815650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681353815650</updated>
+      <workItem from="1681353817952" duration="5644000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
