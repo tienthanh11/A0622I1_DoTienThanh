@@ -1,0 +1,101 @@
+<div class="container">
+  <div>
+    <br>
+    <h1 class="font-text-footer" style="text-align: -webkit-center">Employee List</h1>
+    <br>
+    <!--+++++++++++++++++++++search+++++++++++++++++++++-->
+    <form class="mb-3">
+      <div class="row">
+        <div class="input-group col-md-4">
+          <span class="input-group-text">Name Search</span>
+          <input type="text" class="form-control me-2" placeholder="Name search">
+        </div>
+        <div class="input-group col-md-4">
+          <span class="input-group-text">Email Search</span>
+          <input type="text" class="form-control me-2" placeholder="Email search">
+        </div>
+        <div class="input-group col-md-3">
+          <span class="input-group-text">Type Search</span>
+          <select class="form-select me-2" style="width: auto">
+            <option selected value="">Choose</option>
+            <option *ngFor="let division of divisions" value="{{division.id}}">
+              {{division.name}}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-1">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </div>
+      </div>
+    </form>
+    <br>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Birthday</th>
+          <th>Id Card</th>
+          <th>Salary</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Position</th>
+          <th>Education Degree</th>
+          <th>Division</th>
+          <th></th>
+          <th>
+            <button type="button" class="btn btn-outline-secondary" routerLink="/employee/create">Create</button>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.id}}</td>
+          <td>{{employee.name}}</td>
+          <td>{{employee.birthday | date : "dd/MM/yyyy"}}</td>
+          <td>{{employee.idCard}}</td>
+          <td>{{employee.salary}}</td>
+          <td>{{employee.phone}}</td>
+          <td>{{employee.email}}</td>
+          <td>{{employee.address}}</td>
+          <td>{{employee.position.name}}</td>
+          <td>{{employee.educationDegree.name}}</td>
+          <td>{{employee.division.name}}</td>
+          <td>
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/employee/edit', employee.id]">
+              Edit
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal"
+                    data-bs-target="#employeeModal">
+              Delete
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br><br>
+<!-- Delete Modal -->
+<div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="exampleModalLabel">Xác nhận xóa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

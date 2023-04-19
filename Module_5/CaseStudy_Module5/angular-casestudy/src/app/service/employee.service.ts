@@ -8,7 +8,7 @@ export class EmployeeService {
 
   constructor() { }
 
-  getAllCustomer() {
+  getAllEmployee() {
     return EmployeeDAO.employees;
   }
 }
