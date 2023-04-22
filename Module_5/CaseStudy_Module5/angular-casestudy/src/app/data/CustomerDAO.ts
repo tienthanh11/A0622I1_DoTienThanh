@@ -3,7 +3,7 @@ import {ICustomer} from "../model/icustomer";
 export class CustomerDAO {
   static customers: ICustomer[] = [
     {
-      id: 1,
+      id: 'KH-0001',
       type: {
         id: 5,
         name: 'Member'
@@ -17,7 +17,7 @@ export class CustomerDAO {
       address: '23 Nguyễn Hoàng, Đà Nẵng'
     },
     {
-      id: 2,
+      id: 'KH-0002',
       type: {
         id: 3,
         name: 'Gold'
@@ -31,7 +31,7 @@ export class CustomerDAO {
       address: 'K77/22 Thái Phiên, Quảng Trị'
     },
     {
-      id: 3,
+      id: 'KH-0003',
       type: {
         id: 1,
         name: 'Diamond'
@@ -45,7 +45,7 @@ export class CustomerDAO {
       address: 'K323/12 Ông Ích Khiêm, Vinh'
     },
     {
-      id: 4,
+      id: 'KH-0004',
       type: {
         id: 1,
         name: 'Diamond'
@@ -59,7 +59,7 @@ export class CustomerDAO {
       address: 'K453/12 Lê Lợi, Đà Nẵng'
     },
     {
-      id: 5,
+      id: 'KH-0005',
       type: {
         id: 4,
         name: 'Silver'
@@ -73,7 +73,7 @@ export class CustomerDAO {
       address: '224 Lý Thái Tổ, Gia Lai'
     },
     {
-      id: 6,
+      id: 'KH-0006',
       type: {
         id: 4,
         name: 'Silver'
@@ -87,7 +87,7 @@ export class CustomerDAO {
       address: '37 Yên Thế, Đà Nẵng'
     },
     {
-      id: 7,
+      id: 'KH-0007',
       type: {
         id: 4,
         name: 'Silver'
@@ -101,7 +101,7 @@ export class CustomerDAO {
       address: '24 Lý Thường Kiệt, Quảng Ngãi'
     },
     {
-      id: 8,
+      id: 'KH-0008',
       type: {
         id: 1,
         name: 'Diamond'

@@ -3,7 +3,7 @@ import {IEmployee} from "../model/iemployee";
 export class EmployeeDAO {
   static employees: IEmployee[] = [
     {
-      id: 1,
+      id: 'NV-0001',
       name: 'Nguyễn Văn An',
       birthday: '1970-11-07',
       idCard: '456231786',
@@ -25,7 +25,7 @@ export class EmployeeDAO {
       }
     },
     {
-      id: 2,
+      id: 'NV-0002',
       name: 'Lê Văn Bình',
       birthday: '1997-04-09',
       idCard: '654231234',
@@ -47,7 +47,7 @@ export class EmployeeDAO {
       }
     },
     {
-      id: 3,
+      id: 'NV-0003',
       name: 'Hồ Thị Yến',
       birthday: '1995-12-12',
       idCard: '999231723',
@@ -69,7 +69,7 @@ export class EmployeeDAO {
       }
     },
     {
-      id: 4,
+      id: 'NV-0004',
       name: 'Võ Công Toản',
       birthday: '1980-04-04',
       idCard: '123231365',
@@ -91,7 +91,7 @@ export class EmployeeDAO {
       }
     },
     {
-      id: 5,
+      id: 'NV-0005',
       name: 'Nguyễn Bỉnh Phát',
       birthday: '1999-12-09',
       idCard: '454363232',
@@ -113,7 +113,7 @@ export class EmployeeDAO {
       }
     },
     {
-      id: 6,
+      id: 'NV-0006',
       name: 'Khúc Nguyễn An Nghi',
       birthday: '2000-11-08',
       idCard: '964542311',
@@ -135,7 +135,7 @@ export class EmployeeDAO {
       }
     },
     {
-      id: 7,
+      id: 'NV-0007',
       name: 'Nguyễn Hữu Hà',
       birthday: '1993-01-01',
       idCard: '534323231',
@@ -157,7 +157,7 @@ export class EmployeeDAO {
       }
     },
     {
-      id: 8,
+      id: 'NV-0008',
       name: 'Nguyễn Hà Đông',
       birthday: '1989-09-03',
       idCard: '234414123',
@@ -179,7 +179,7 @@ export class EmployeeDAO {
       }
     },
     {
-      id: 9,
+      id: 'NV-0009',
       name: 'Tòng Hoang',
       birthday: '1982-09-03',
       idCard: '256781231',
@@ -201,7 +201,7 @@ export class EmployeeDAO {
       }
     },
     {
-      id: 10,
+      id: 'NV-0010',
       name: 'Nguyễn Công Đạo',
       birthday: '1994-01-08',
       idCard: '755434343',

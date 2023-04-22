@@ -3,7 +3,7 @@ import {IEducationDegree} from "./ieducation-degree";
 import {IDivision} from "./idivision";
 
 export interface IEmployee {
-  id?: number;
+  id?: string;
   name?: string;
   birthday?: string;
   idCard?: string;

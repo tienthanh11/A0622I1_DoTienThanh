@@ -9,7 +9,7 @@ export class ContractDAO {
       deposit: 0,
       totalMoney: 500000,
       customer: {
-        id: 1,
+        id: 'KH-0001',
         type: {
           id: 5,
           name: 'Member'
@@ -23,7 +23,7 @@ export class ContractDAO {
         address: '23 Nguyễn Hoàng, Đà Nẵng'
       },
       employee: {
-        id: 3,
+        id: 'NV-0003',
         name: 'Hồ Thị Yến',
         birthday: '1995-12-12',
         idCard: '999231723',
@@ -45,7 +45,7 @@ export class ContractDAO {
         }
       },
       facility: {
-        id: 3,
+        id: 'DV-0003',
         name: 'Room Twin 01',
         area: 5000,
         cost: 1000000,
@@ -66,7 +66,7 @@ export class ContractDAO {
       deposit: 200000,
       totalMoney: 1000000,
       customer: {
-        id: 3,
+        id: 'KH-0003',
         type: {
           id: 1,
           name: 'Diamond'
@@ -80,7 +80,7 @@ export class ContractDAO {
         address: 'K323/12 Ông Ích Khiêm, Vinh'
       },
       employee: {
-        id: 7,
+        id: 'NV-0007',
         name: 'Nguyễn Hữu Hà',
         birthday: '1993-01-01',
         idCard: '534323231',
@@ -102,7 +102,7 @@ export class ContractDAO {
         }
       },
       facility: {
-        id: 1,
+        id: 'DV-0001',
         name: 'Villa Beach Front',
         area: 25000,
         cost: 10000000,
@@ -123,7 +123,7 @@ export class ContractDAO {
       deposit: 50000,
       totalMoney: 700000,
       customer: {
-        id: 4,
+        id: 'KH-0004',
         type: {
           id: 1,
           name: 'Diamond'
@@ -137,7 +137,7 @@ export class ContractDAO {
         address: 'K453/12 Lê Lợi, Đà Nẵng'
       },
       employee: {
-        id: 3,
+        id: 'NV-0003',
         name: 'Hồ Thị Yến',
         birthday: '1995-12-12',
         idCard: '999231723',
@@ -159,7 +159,7 @@ export class ContractDAO {
         }
       },
       facility: {
-        id: 2,
+        id: 'DV-0002',
         name: 'House Princess 01',
         area: 14000,
         cost: 5000000,
@@ -180,7 +180,7 @@ export class ContractDAO {
       deposit: 100000,
       totalMoney: 5000000,
       customer: {
-        id: 5,
+        id: 'KH-0005',
         type: {
           id: 4,
           name: 'Silver'
@@ -194,7 +194,7 @@ export class ContractDAO {
         address: '224 Lý Thái Tổ, Gia Lai'
       },
       employee: {
-        id: 7,
+        id: 'NV-0007',
         name: 'Nguyễn Hữu Hà',
         birthday: '1993-01-01',
         idCard: '534323231',
@@ -216,7 +216,7 @@ export class ContractDAO {
         }
       },
       facility: {
-        id: 5,
+        id: 'DV-0005',
         name: 'House Princess 02',
         area: 10000,
         cost: 4000000,
@@ -237,7 +237,7 @@ export class ContractDAO {
       deposit: 0,
       totalMoney: 500000,
       customer: {
-        id: 2,
+        id: 'KH-0002',
         type: {
           id: 3,
           name: 'Gold'
@@ -251,7 +251,7 @@ export class ContractDAO {
         address: 'K77/22 Thái Phiên, Quảng Trị'
       },
       employee: {
-        id: 7,
+        id: 'NV-0007',
         name: 'Nguyễn Hữu Hà',
         birthday: '1993-01-01',
         idCard: '534323231',
@@ -273,7 +273,7 @@ export class ContractDAO {
         }
       },
       facility: {
-        id: 6,
+        id: 'DV-0006',
         name: 'Room Twin 02',
         area: 3000,
         cost: 900000,
