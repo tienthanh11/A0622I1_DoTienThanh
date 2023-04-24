@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ICustomerType} from "../../model/icustomer-type";
 import {CustomerService} from "../../service/customer.service";
@@ -19,7 +19,8 @@ export class CustomerEditComponent implements OnInit {
   constructor(private customerService: CustomerService,
               private customerTypeService: CustomerTypeService,
               private activatedRoute: ActivatedRoute,
-              private router: Router) { }
+              private router: Router) {
+  }
 
   ngOnInit(): void {
     this.customerTypes = this.customerTypeService.getAllCustomerType();
@@ -39,5 +40,13 @@ export class CustomerEditComponent implements OnInit {
         address: new FormControl(customerEdit.address, [Validators.required]),
       });
     });
+  }
+
+  editCustomer(id: string) {
+    const customer = this.customerFormEdit.value;
+    customer.type = this.customerTypeService.findByIdCustomerType(customer.type);
+    this.customerService.updateCustomer(id, customer);
+    alert('Cập nhật thành công');
+    this.router.navigateByUrl('customer/list');
   }
 }

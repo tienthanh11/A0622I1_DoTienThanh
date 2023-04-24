@@ -28,4 +28,10 @@ export class CustomerService {
       }
     }
   }
+
+  deleteCustomer(id: string) {
+    CustomerDAO.customers = CustomerDAO.customers.filter(customer => {
+      return customer.id !== id;
+    })
+  }
 }

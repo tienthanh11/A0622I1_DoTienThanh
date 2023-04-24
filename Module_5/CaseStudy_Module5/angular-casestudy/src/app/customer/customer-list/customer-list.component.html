@@ -65,10 +65,12 @@
           <td>{{customer.email}}</td>
           <td>{{customer.address}}</td>
           <td>
-            <button type="button" class="btn btn-outline-primary">Edit</button>
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/customer/edit', customer.id]">
+              Edit
+            </button>
           </td>
           <td>
-            <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal"
+            <button type="button" (click)="showInfo(customer)" class="btn btn-outline-danger" data-bs-toggle="modal"
                     data-bs-target="#customerModal">
               Delete
             </button>
@@ -89,10 +91,54 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <h4 class="text-primary">Thông tin trước khi xóa</h4>
+        <table class="table table-bordered">
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">ID</span></td>
+            <td><span class="ml-3"> {{customerDelete.id}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Name</span></td>
+            <td><span class="ml-3"> {{customerDelete.name}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Gender</span></td>
+            <td>
+              <span *ngIf="customerDelete.gender == 0" class="ml-3"> Nữ</span>
+              <span *ngIf="customerDelete.gender == 1" class="ml-3"> Nam</span>
+            </td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Address</span></td>
+            <td><span class="ml-3"> {{customerDelete.address}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Email</span></td>
+            <td><span class="ml-3"> {{customerDelete.email}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Phone</span></td>
+            <td><span class="ml-3"> {{customerDelete.phone}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Id Card</span></td>
+            <td><span class="ml-3"> {{customerDelete.idCard}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Birthday</span></td>
+            <td><span class="ml-3"> {{customerDelete.birthday | date: "dd/MM/yyyy"}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Type</span></td>
+            <td><span class="ml-3"> {{customerDelete.type.name}}</span></td>
+          </tr>
+        </table>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete</button>
+        <div style="position: absolute; left: 18px">
+          <h6 class="text-danger">Lưu ý! Hành động không thể hoàn tác!</h6>
+        </div>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete(customerDelete.id)">Delete</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
