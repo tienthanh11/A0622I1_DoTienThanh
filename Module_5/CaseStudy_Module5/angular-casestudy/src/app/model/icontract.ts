@@ -3,7 +3,7 @@ import {IEmployee} from "./iemployee";
 import {IFacility} from "./ifacility";
 
 export interface IContract {
-  id?: number;
+  id?: string;
   startDate?: string;
   endDate?: string;
   deposit?: number;

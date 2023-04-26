@@ -19,6 +19,11 @@ export class EmployeeListComponent implements OnInit {
   positions: IPosition[] = [];
   educationDegrees: IEducationDegree[] = [];
   divisions: IDivision[] = [];
+  employeeDelete: IEmployee = {
+    position: {},
+    educationDegree: {},
+    division: {}
+  }
 
   constructor(private employeeService: EmployeeService,
               private positionService: PositionService,
@@ -37,5 +42,15 @@ export class EmployeeListComponent implements OnInit {
     this.educationDegrees = this.educationDegreeService.getAllEducationDegree();
 
     this.divisions = this.divisionService.getAllDivision();
+  }
+
+  showInfo(employee: IEmployee) {
+    this.employeeDelete = employee;
+  }
+
+  delete(id: string) {
+    this.employeeService.deleteEmployee(id);
+    alert("Xóa nhân viên thành công");
+    this.getAll();
   }
 }

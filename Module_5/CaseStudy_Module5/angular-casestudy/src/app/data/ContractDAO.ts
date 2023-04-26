@@ -3,7 +3,7 @@ import {IContract} from "../model/icontract";
 export class ContractDAO {
   static contacts: IContract[] = [
     {
-      id: 1,
+      id: 'HD-0001',
       startDate: '2020-12-08',
       endDate: '2020-12-08',
       deposit: 0,
@@ -60,7 +60,7 @@ export class ContractDAO {
       }
     },
     {
-      id: 2,
+      id: 'HD-0002',
       startDate: '2020-07-14',
       endDate: '2020-07-21',
       deposit: 200000,
@@ -117,7 +117,7 @@ export class ContractDAO {
       }
     },
     {
-      id: 3,
+      id: 'HD-0003',
       startDate: '2021-03-15',
       endDate: '2021-03-17',
       deposit: 50000,
@@ -174,7 +174,7 @@ export class ContractDAO {
       }
     },
     {
-      id: 4,
+      id: 'HD-0004',
       startDate: '2021-01-14',
       endDate: '2021-01-18',
       deposit: 100000,
@@ -231,7 +231,7 @@ export class ContractDAO {
       }
     },
     {
-      id: 5,
+      id: 'HD-0005',
       startDate: '2021-07-14',
       endDate: '2021-07-15',
       deposit: 0,

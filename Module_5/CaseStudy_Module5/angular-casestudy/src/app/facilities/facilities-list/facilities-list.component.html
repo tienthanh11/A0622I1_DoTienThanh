@@ -16,9 +16,9 @@
         <h5 class="card-title">{{facility.name}}</h5>
         <p class="card-text text-card"> Room size: {{facility.area}} m<sup>2</sup></p>
         <p class="card-text text-card">Description: {{facility.description}}</p>
-        <a class="btn btn-outline-primary text-card me-2">Edit</a>
-        <button type="button" class="btn btn-outline-danger text-card" data-bs-toggle="modal"
-                data-bs-target="#facilityModal">
+        <a class="btn btn-outline-primary text-card me-2" [routerLink]="['/facility/edit', facility.id]">Edit</a>
+        <button type="button" (click)="showInfo(facility)" class="btn btn-outline-danger text-card"
+                data-bs-toggle="modal" data-bs-target="#facilityModal">
           Delete
         </button>
       </div>
@@ -35,10 +35,102 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <h4 class="text-primary">Thông tin trước khi xoá</h4>
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Name</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.name}}</span>-->
+        <!--        </div>-->
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Area</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.area}}</span>-->
+        <!--        </div>-->
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Cost</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.cost}}</span>-->
+        <!--        </div>-->
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Max People</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.maxPeople}}</span>-->
+        <!--        </div>-->
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Rent Type</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.rentType}}</span>-->
+        <!--        </div>-->
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Service Type</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.serviceType}}</span>-->
+        <!--        </div>-->
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Standard Room</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.standardRoom}}</span>-->
+        <!--        </div>-->
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Description</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.description}}</span>-->
+        <!--        </div>-->
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Pool Area</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.poolArea}}</span>-->
+        <!--        </div>-->
+        <!--        <div class="my-3">-->
+        <!--          <span class="input-group-text" style="display: unset">Number Of Floor</span>-->
+        <!--          <span class="ml-3"> {{facilityDelete.numberOfFloor}}</span>-->
+        <!--        </div>-->
+        <table class="table table-bordered">
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">ID</span></td>
+            <td><span class="ml-3"> {{facilityDelete.id}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Name</span></td>
+            <td><span class="ml-3"> {{facilityDelete.name}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Area</span></td>
+            <td><span class="ml-3"> {{facilityDelete.area}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Cost</span></td>
+            <td><span class="ml-3"> {{facilityDelete.cost}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Max People</span></td>
+            <td><span class="ml-3"> {{facilityDelete.maxPeople}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Rent Type</span></td>
+            <td><span class="ml-3"> {{facilityDelete.rentType}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Service Type</span></td>
+            <td><span class="ml-3"> {{facilityDelete.serviceType}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Standard Room</span></td>
+            <td><span class="ml-3"> {{facilityDelete.standardRoom}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Description</span></td>
+            <td><span class="ml-3"> {{facilityDelete.description}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Pool Area</span></td>
+            <td><span class="ml-3"> {{facilityDelete.poolArea}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Number Of Floor</span></td>
+            <td><span class="ml-3"> {{facilityDelete.numberOfFloor}}</span></td>
+          </tr>
+        </table>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete</button>
+        <div style="position: absolute; left: 18px">
+          <h6 class="text-danger">Lưu ý! Hành động không thể hoàn tác!</h6>
+        </div>
+        <br>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete(facilityDelete.id)">
+          Delete
+        </button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>

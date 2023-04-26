@@ -11,4 +11,8 @@ export class PositionService {
   getAllPosition() {
     return PositionDAO.positions;
   }
+
+  findByIdPosition(id: string) {
+    return PositionDAO.positions.find(position => position.id === +id);
+  }
 }

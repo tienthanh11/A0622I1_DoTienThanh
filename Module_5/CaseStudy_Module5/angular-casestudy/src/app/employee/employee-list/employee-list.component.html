@@ -4,30 +4,36 @@
     <h1 class="font-text-footer" style="text-align: -webkit-center">Employee List</h1>
     <br>
     <!--+++++++++++++++++++++search+++++++++++++++++++++-->
-    <form class="mb-3">
+    <div class="container">
       <div class="row">
-        <div class="input-group col-md-4">
-          <span class="input-group-text">Name Search</span>
-          <input type="text" class="form-control me-2" placeholder="Name search">
+        <div class="col-md-4">
+          <div class="input-group">
+            <span class="input-group-text">Name Search</span>
+            <input type="text" class="form-control me-2" placeholder="Name search">
+          </div>
         </div>
-        <div class="input-group col-md-4">
-          <span class="input-group-text">Email Search</span>
-          <input type="text" class="form-control me-2" placeholder="Email search">
+        <div class="col-md-4">
+          <div class="input-group">
+            <span class="input-group-text">Email Search</span>
+            <input type="text" class="form-control me-2" placeholder="Email search">
+          </div>
         </div>
-        <div class="input-group col-md-3">
-          <span class="input-group-text">Type Search</span>
-          <select class="form-select me-2" style="width: auto">
-            <option selected value="">Choose</option>
-            <option *ngFor="let division of divisions" value="{{division.id}}">
-              {{division.name}}
-            </option>
-          </select>
+        <div class="col-md-3">
+          <div class="input-group">
+            <span class="input-group-text">Division Search</span>
+            <select class="form-select me-2" style="width: auto">
+              <option selected value="">Choose</option>
+              <option *ngFor="let division of divisions" value="{{division.id}}">
+                {{division.name}}
+              </option>
+            </select>
+          </div>
         </div>
         <div class="col-md-1">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </div>
       </div>
-    </form>
+    </div>
     <br>
     <div class="table-responsive">
       <table class="table table-hover">
@@ -71,7 +77,7 @@
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal"
+            <button type="button" (click)="showInfo(employee)" class="btn btn-outline-danger" data-bs-toggle="modal"
                     data-bs-target="#employeeModal">
               Delete
             </button>
@@ -92,10 +98,56 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <h4 class="text-primary">Thông tin trước khi xóa</h4>
+        <table class="table table-bordered">
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">ID</span></td>
+            <td><span class="ml-3"> {{employeeDelete.id}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Name</span></td>
+            <td><span class="ml-3"> {{employeeDelete.name}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Birthday</span></td>
+            <td><span class="ml-3"> {{employeeDelete.birthday | date: "dd/MM/yyyy"}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Id Card</span></td>
+            <td><span class="ml-3"> {{employeeDelete.idCard}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Salary</span></td>
+            <td><span class="ml-3"> {{employeeDelete.salary}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Phone</span></td>
+            <td><span class="ml-3"> {{employeeDelete.phone}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Email</span></td>
+            <td><span class="ml-3"> {{employeeDelete.email}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Address</span></td>
+            <td><span class="ml-3"> {{employeeDelete.address}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Position</span></td>
+            <td><span class="ml-3"> {{employeeDelete.position.name}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Education Degree</span></td>
+            <td><span class="ml-3"> {{employeeDelete.educationDegree.name}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Division</span></td>
+            <td><span class="ml-3"> {{employeeDelete.division.name}}</span></td>
+          </tr>
+        </table>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete(employeeDelete.id)">Delete</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>

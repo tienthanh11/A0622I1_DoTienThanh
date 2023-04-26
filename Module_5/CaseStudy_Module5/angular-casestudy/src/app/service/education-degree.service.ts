@@ -11,4 +11,8 @@ export class EducationDegreeService {
   getAllEducationDegree() {
     return EducationDegreeDAO.educationDegrees;
   }
+
+  findByIdEducationDegree(id: string) {
+    return EducationDegreeDAO.educationDegrees.find(educationDegree => educationDegree.id === +id);
+  }
 }
