@@ -3,6 +3,7 @@ import {ICustomerType} from "../../model/icustomer-type";
 import {CustomerTypeService} from "../../service/customer-type.service";
 import {CustomerService} from "../../service/customer.service";
 import {ICustomer} from "../../model/icustomer";
+import {ToastrService} from "ngx-toastr";
 
 
 @Component({
@@ -19,7 +20,8 @@ export class CustomerListComponent implements OnInit {
   };
 
   constructor(private customerService: CustomerService,
-              private customerTypeService: CustomerTypeService) {
+              private customerTypeService: CustomerTypeService,
+              private toast: ToastrService) {
   }
 
   ngOnInit(): void {
@@ -27,9 +29,13 @@ export class CustomerListComponent implements OnInit {
   }
 
   getAll() {
-    this.customers = this.customerService.getAllCustomer();
+    this.customerService.getAllCustomer().subscribe((data) => {
+      this.customers = data;
+    });
 
-    this.customerTypes = this.customerTypeService.getAllCustomerType();
+    this.customerTypeService.getAllCustomerType().subscribe((data) => {
+      this.customerTypes = data;
+    });
   }
 
   showInfo(customer: ICustomer) {
@@ -37,8 +43,15 @@ export class CustomerListComponent implements OnInit {
   }
 
   delete(id: string) {
-    this.customerService.deleteCustomer(id);
-    alert("Xóa khách hàng thành công");
-    this.getAll();
+    this.customerService.deleteCustomer(id).subscribe(
+      () => {
+      },
+      () => {
+      },
+      () => {
+        this.toast.success("Xóa khách hàng thành công");
+        this.getAll();
+      }
+    );
   }
 }

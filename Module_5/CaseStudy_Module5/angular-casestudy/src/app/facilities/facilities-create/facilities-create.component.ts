@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {FacilityService} from "../../service/facility.service";
 import {Router} from "@angular/router";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-facilities-create',
@@ -13,7 +14,9 @@ export class FacilitiesCreateComponent implements OnInit {
   facilityFormCreate: FormGroup;
 
   constructor(private facilityService: FacilityService,
-              private router: Router) { }
+              private router: Router,
+              private toast: ToastrService) {
+  }
 
   ngOnInit(): void {
     this.facilityFormCreate = new FormGroup({
@@ -33,7 +36,15 @@ export class FacilitiesCreateComponent implements OnInit {
   }
 
   createFacility() {
-    this.facilityService.createFacility(this.facilityFormCreate.value);
-    this.router.navigateByUrl('facility/list');
+    this.facilityService.createFacility(this.facilityFormCreate.value).subscribe(
+      () => {
+      },
+      () => {
+      },
+      () => {
+        this.toast.success("Thêm mới dịch vụ thành công");
+        this.router.navigateByUrl('facility/list');
+      }
+    );
   }
 }

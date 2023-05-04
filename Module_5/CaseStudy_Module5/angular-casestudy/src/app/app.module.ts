@@ -1,24 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './templates/header/header.component';
-import { NavigationComponent } from './templates/navigation/navigation.component';
-import { FooterComponent } from './templates/footer/footer.component';
-import { IntroComponent } from './templates/intro/intro.component';
-import { FacilitiesListComponent } from './facilities/facilities-list/facilities-list.component';
-import { FacilitiesCreateComponent } from './facilities/facilities-create/facilities-create.component';
-import { FacilitiesEditComponent } from './facilities/facilities-edit/facilities-edit.component';
-import { CustomerListComponent } from './customer/customer-list/customer-list.component';
-import { CustomerCreateComponent } from './customer/customer-create/customer-create.component';
-import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
-import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
-import { EmployeeCreateComponent } from './employee/employee-create/employee-create.component';
-import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.component';
-import { ContractListComponent } from './contract/contract-list/contract-list.component';
-import { ContractCreateComponent } from './contract/contract-create/contract-create.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './templates/header/header.component';
+import {NavigationComponent} from './templates/navigation/navigation.component';
+import {FooterComponent} from './templates/footer/footer.component';
+import {IntroComponent} from './templates/intro/intro.component';
+import {FacilitiesListComponent} from './facilities/facilities-list/facilities-list.component';
+import {FacilitiesCreateComponent} from './facilities/facilities-create/facilities-create.component';
+import {FacilitiesEditComponent} from './facilities/facilities-edit/facilities-edit.component';
+import {CustomerListComponent} from './customer/customer-list/customer-list.component';
+import {CustomerCreateComponent} from './customer/customer-create/customer-create.component';
+import {CustomerEditComponent} from './customer/customer-edit/customer-edit.component';
+import {EmployeeListComponent} from './employee/employee-list/employee-list.component';
+import {EmployeeCreateComponent} from './employee/employee-create/employee-create.component';
+import {EmployeeEditComponent} from './employee/employee-edit/employee-edit.component';
+import {ContractListComponent} from './contract/contract-list/contract-list.component';
+import {ContractCreateComponent} from './contract/contract-create/contract-create.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -43,9 +45,16 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,0 +1,836 @@
+{
+  "customers": [
+    {
+      "id": "KH-0001",
+      "type": {
+        "id": 5,
+        "name": "Member"
+      },
+      "name": "Nguyễn Thị Hào",
+      "birthday": "1970-11-07",
+      "gender": 0,
+      "idCard": "643431213",
+      "phone": "0945423362",
+      "email": "thihao07@gmail.com",
+      "address": "23 Nguyễn Hoàng, Đà Nẵng"
+    },
+    {
+      "id": "KH-0002",
+      "type": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "name": "Phạm Xuân Diệu",
+      "birthday": "1992-08-08",
+      "gender": 1,
+      "idCard": "865342123",
+      "phone": "0954333333",
+      "email": "xuandieu92@gmail.com",
+      "address": "K77/22 Thái Phiên, Quảng Trị"
+    },
+    {
+      "id": "KH-0003",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Trương Đình Nghệ",
+      "birthday": "1990-02-27",
+      "gender": 1,
+      "idCard": "488645199",
+      "phone": "0373213122",
+      "email": "nghenhan2702@gmail.com",
+      "address": "K323/12 Ông Ích Khiêm, Vinh"
+    },
+    {
+      "id": "KH-0004",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Dương Văn Quan",
+      "birthday": "1981-07-08",
+      "gender": 1,
+      "idCard": "543432111",
+      "phone": "0490039241",
+      "email": "duongquan@gmail.com",
+      "address": "K453/12 Lê Lợi, Đà Nẵng"
+    },
+    {
+      "id": "KH-0005",
+      "type": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "name": "Hoàng Trần Nhi Nhi",
+      "birthday": "1995-12-09",
+      "gender": 0,
+      "idCard": "795453345",
+      "phone": "0312345678",
+      "email": "nhinhi123@gmail.com",
+      "address": "224 Lý Thái Tổ, Gia Lai"
+    },
+    {
+      "id": "KH-0006",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Tôn Nữ Mộc Châu Châu",
+      "birthday": "2005-12-08",
+      "gender": "1",
+      "idCard": "999999999",
+      "phone": "0908888844",
+      "email": "tonnuchau@gmail.com",
+      "address": "37 Yên Thế, Đà Nẵng"
+    },
+    {
+      "id": "KH-0007",
+      "type": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "name": "Trần Đại Danh",
+      "birthday": "1994-07-01",
+      "gender": 1,
+      "idCard": "432341235",
+      "phone": "0643343433",
+      "email": "danhhai99@gmail.com",
+      "address": "24 Lý Thường Kiệt, Quảng Ngãi"
+    },
+    {
+      "id": "KH-0008",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Nguyễn Mỹ Kim",
+      "birthday": "1984-04-08",
+      "gender": 0,
+      "idCard": "856453123",
+      "phone": "0912345698",
+      "email": "kimcuong84@gmail.com",
+      "address": "K123/45 Lê Lợi, Hồ Chí Minh"
+    }
+  ],
+  "customer-types": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "employees": [
+    {
+      "id": "NV-0001",
+      "name": "Nguyễn Văn An",
+      "birthday": "1970-11-07",
+      "idCard": "456231786",
+      "salary": 10000000,
+      "phone": "0901234121",
+      "email": "annguyen@gmail.com",
+      "address": "295 Nguyễn Tất Thành, Đà Nẵng",
+      "position": {
+        "id": 1,
+        "name": "Lễ tân"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Đại Học"
+      },
+      "division": {
+        "id": 1,
+        "name": "Sale–Marketing"
+      }
+    },
+    {
+      "id": "NV-0002",
+      "name": "Lê Văn Bình",
+      "birthday": "1997-04-09",
+      "idCard": "654231234",
+      "salary": 7000000,
+      "phone": "0934212314",
+      "email": "binhlv@gmail.com",
+      "address": "22 Yên Bái, Đà Nẵng",
+      "position": {
+        "id": 1,
+        "name": "Lễ tân"
+      },
+      "educationDegree": {
+        "id": 2,
+        "name": "Cao đẳng"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành chính"
+      }
+    },
+    {
+      "id": "NV-0003",
+      "name": "Hồ Thị Yến",
+      "birthday": "1995-12-12",
+      "idCard": "999231723",
+      "salary": 14000000,
+      "phone": "0412352315",
+      "email": "thiyen@gmail.com",
+      "address": "K234/11 Điện Biên Phủ, Gia Lai",
+      "position": {
+        "id": 1,
+        "name": "Lễ tân"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Đại Học"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành chính"
+      }
+    },
+    {
+      "id": "NV-0004",
+      "name": "Võ Công Toản",
+      "birthday": "1980-04-04",
+      "idCard": "123231365",
+      "salary": 17000000,
+      "phone": "0374443232",
+      "email": "toan0404@gmail.com",
+      "address": "77 Hoàng Diệu, Quảng Trị",
+      "position": {
+        "id": 1,
+        "name": "Lễ tân"
+      },
+      "educationDegree": {
+        "id": 4,
+        "name": "Sau đại học"
+      },
+      "division": {
+        "id": 4,
+        "name": "Quản lý"
+      }
+    },
+    {
+      "id": "NV-0005",
+      "name": "Nguyễn Bỉnh Phát",
+      "birthday": "1999-12-09",
+      "idCard": "454363232",
+      "salary": 6000000,
+      "phone": "0902341231",
+      "email": "phatphat@gmail.com",
+      "address": "43 Yên Bái, Đà Nẵng",
+      "position": {
+        "id": 2,
+        "name": "Phục vụ"
+      },
+      "educationDegree": {
+        "id": 1,
+        "name": "Trung cấp"
+      },
+      "division": {
+        "id": 1,
+        "name": "Sale–Marketing"
+      }
+    },
+    {
+      "id": "NV-0006",
+      "name": "Khúc Nguyễn An Nghi",
+      "birthday": "2000-11-08",
+      "idCard": "964542311",
+      "salary": 7000000,
+      "phone": "0978653213",
+      "email": "annghi20@gmail.com",
+      "address": "294 Nguyễn Tất Thành, Đà Nẵng",
+      "position": {
+        "id": 2,
+        "name": "Phục vụ"
+      },
+      "educationDegree": {
+        "id": 2,
+        "name": "Cao đẳng"
+      },
+      "division": {
+        "id": 3,
+        "name": "Phục vụ"
+      }
+    },
+    {
+      "id": "NV-0007",
+      "name": "Nguyễn Hữu Hà",
+      "birthday": "1993-01-01",
+      "idCard": "534323231",
+      "salary": 8000000,
+      "phone": "0941234553",
+      "email": "nhh0101@gmail.com",
+      "address": "4 Nguyễn Chí Thanh, Huế",
+      "position": {
+        "id": 2,
+        "name": "Phục vụ"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Đại Học"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành chính"
+      }
+    },
+    {
+      "id": "NV-0008",
+      "name": "Nguyễn Hà Đông",
+      "birthday": "1989-09-03",
+      "idCard": "234414123",
+      "salary": 9000000,
+      "phone": "0642123111",
+      "email": "donghanguyen@gmail.com",
+      "address": "111 Hùng Vương, Hà Nội",
+      "position": {
+        "id": 2,
+        "name": "Phục vụ"
+      },
+      "educationDegree": {
+        "id": 4,
+        "name": "Sau đại học"
+      },
+      "division": {
+        "id": 4,
+        "name": "Quản lý"
+      }
+    },
+    {
+      "id": "NV-0009",
+      "name": "Tòng Hoang",
+      "birthday": "1982-09-03",
+      "idCard": "256781231",
+      "salary": 6000000,
+      "phone": "0245144444",
+      "email": "hoangtong@gmail.com",
+      "address": "213 Hàm Nghi, Đà Nẵng",
+      "position": {
+        "id": 2,
+        "name": "Phục vụ"
+      },
+      "educationDegree": {
+        "id": 4,
+        "name": "Sau đại học"
+      },
+      "division": {
+        "id": 4,
+        "name": "Quản lý"
+      }
+    },
+    {
+      "id": "NV-0010",
+      "name": "Nguyễn Công Đạo",
+      "birthday": "1994-01-08",
+      "idCard": "755434343",
+      "salary": 8000000,
+      "phone": "0988767111",
+      "email": "nguyencongdao12@gmail.com",
+      "address": "6 Hoà Khánh, Đồng Nai",
+      "position": {
+        "id": 2,
+        "name": "Phục vụ"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Đại Học"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành chính"
+      }
+    }
+  ],
+  "positions": [
+    {
+      "id": 1,
+      "name": "Lễ tân"
+    },
+    {
+      "id": 2,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 3,
+      "name": "Chuyên viên"
+    },
+    {
+      "id": 4,
+      "name": "Giám sát"
+    },
+    {
+      "id": 5,
+      "name": "Quản lý"
+    },
+    {
+      "id": 6,
+      "name": "Giám đốc"
+    }
+  ],
+  "educationDegrees": [
+    {
+      "id": 1,
+      "name": "Trung cấp"
+    },
+    {
+      "id": 2,
+      "name": "Cao đẳng"
+    },
+    {
+      "id": 3,
+      "name": "Đại Học"
+    },
+    {
+      "id": 4,
+      "name": "Sau đại học"
+    }
+  ],
+  "divisions": [
+    {
+      "id": 1,
+      "name": "Sale–Marketing"
+    },
+    {
+      "id": 2,
+      "name": "Hành chính"
+    },
+    {
+      "id": 3,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 4,
+      "name": "Quản lý"
+    }
+  ],
+  "facilities": [
+    {
+      "id": "DV-0001",
+      "name": "Villa Beach Front",
+      "area": 25000,
+      "cost": 10000000,
+      "maxPeople": 10,
+      "rentType": "Room",
+      "serviceType": "Year",
+      "standardRoom": "Vip",
+      "description": "Có hồ bơi",
+      "poolArea": 500,
+      "numberOfFloor": 4,
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "id": "DV-0002",
+      "name": "House Princess 01",
+      "area": 14000,
+      "cost": 5000000,
+      "maxPeople": 7,
+      "rentType": "House",
+      "serviceType": "Month",
+      "standardRoom": "Vip",
+      "description": "Có thêm bếp nướng",
+      "poolArea": 500,
+      "numberOfFloor": 3,
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F-370x239.jpg"
+    },
+    {
+      "id": "DV-0003",
+      "name": "Room Twin 01",
+      "area": 5000,
+      "cost": 1000000,
+      "maxPeople": 2,
+      "rentType": "Room",
+      "serviceType": "Day",
+      "standardRoom": "Normal",
+      "description": "Có tivi",
+      "poolArea": 500,
+      "numberOfFloor": 3,
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Lagoon-Superior-twin-bed-F-370x239.jpg"
+    },
+    {
+      "id": "DV-0004",
+      "name": "Villa No Beach Front",
+      "area": 22000,
+      "cost": 9000000,
+      "maxPeople": 8,
+      "rentType": "Villa",
+      "serviceType": "Day",
+      "standardRoom": "Normal",
+      "description": "Có hồ bơi",
+      "poolArea": 300,
+      "numberOfFloor": 3,
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Garden-Superior-TwinBed-1-F-370x239.jpg"
+    },
+    {
+      "id": "DV-0005",
+      "name": "House Princess 02",
+      "area": 10000,
+      "cost": 4000000,
+      "maxPeople": 5,
+      "rentType": "House",
+      "serviceType": "Month",
+      "standardRoom": "Normal",
+      "description": "Có thêm bếp nướng",
+      "poolArea": 300,
+      "numberOfFloor": 2,
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Garden-Deluxe-twin-bed-F-370x239.jpg"
+    },
+    {
+      "id": "DV-0006",
+      "name": "Room Twin 02",
+      "area": 3000,
+      "cost": 900000,
+      "maxPeople": 2,
+      "rentType": "Room",
+      "serviceType": "Day",
+      "standardRoom": "Normal",
+      "description": "Có tivi",
+      "poolArea": 300,
+      "numberOfFloor": 2,
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Presidential-Suite-F-370x239.jpg"
+    },
+    {
+      "id": "DV-0007",
+      "name": "Villa Beach Front 02",
+      "area": 25000,
+      "cost": 10000000,
+      "maxPeople": 10,
+      "rentType": "Room",
+      "serviceType": "Year",
+      "standardRoom": "Vip",
+      "description": "Có hồ bơi",
+      "poolArea": 500,
+      "numberOfFloor": 4,
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Beach_Pool_Villas-_Exterior-1-F-370x239.jpg"
+    },
+    {
+      "id": "DV-0008",
+      "name": "House Princess 03",
+      "area": 14000,
+      "cost": 5000000,
+      "maxPeople": 7,
+      "rentType": "House",
+      "serviceType": "Month",
+      "standardRoom": "Vip",
+      "description": "Có thêm bếp nướng",
+      "poolArea": 500,
+      "numberOfFloor": 3,
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Pool_Villas-F-370x239.jpg"
+    },
+    {
+      "id": "DV-0009",
+      "name": "Room Twin 03",
+      "area": 5000,
+      "cost": 1000000,
+      "maxPeople": 2,
+      "rentType": "Room",
+      "serviceType": "Day",
+      "standardRoom": "Normal",
+      "description": "Có tivi",
+      "poolArea": 500,
+      "numberOfFloor": 3,
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-F-370x239.jpg"
+    },
+    {
+      "id": "DV-0010",
+      "name": "Villia Pro Vip 01",
+      "area": "100",
+      "cost": 5000000,
+      "maxPeople": 3,
+      "rentType": "Villa",
+      "serviceType": "Month",
+      "standardRoom": "Vip",
+      "description": "có điều hòa, hồ bơi, điều kiện đầy đủ",
+      "poolArea": 500,
+      "numberOfFloor": 6,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRffaTy1Qb5g8-SW8ed9bJ0dFiCTN96uDpRzZNXY1jp&s"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "HD-0001",
+      "startDate": "2020-12-08",
+      "endDate": "2020-12-08",
+      "deposit": 0,
+      "totalMoney": 500000,
+      "customer": {
+        "id": "KH-0001",
+        "type": "Member",
+        "name": "Nguyễn Thị Hào",
+        "birthday": "1970-11-07",
+        "gender": 0,
+        "idCard": "643431213",
+        "phone": "0945423362",
+        "email": "thihao07@gmail.com",
+        "address": "23 Nguyễn Hoàng, Đà Nẵng"
+      },
+      "employee": {
+        "id": "NV-0003",
+        "name": "Hồ Thị Yến",
+        "birthday": "1995-12-12",
+        "idCard": "999231723",
+        "salary": 14000000,
+        "phone": "0412352315",
+        "email": "thiyen@gmail.com",
+        "address": "K234/11 Điện Biên Phủ, Gia Lai",
+        "position": {
+          "id": 1,
+          "name": "Lễ tân"
+        },
+        "educationDegree": {
+          "id": 3,
+          "name": "Đại Học"
+        },
+        "division": {
+          "id": 2,
+          "name": "Hành chính"
+        }
+      },
+      "facility": {
+        "id": "DV-0003",
+        "name": "Room Twin 01",
+        "area": 5000,
+        "cost": 1000000,
+        "maxPeople": 2,
+        "rentType": "Room",
+        "serviceType": "Day",
+        "standardRoom": "Normal",
+        "description": "Có tivi",
+        "poolArea": 500,
+        "numberOfFloor": 3,
+        "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Lagoon-Superior-twin-bed-F-370x239.jpg"
+      }
+    },
+    {
+      "id": "HD-0002",
+      "startDate": "2020-07-14",
+      "endDate": "2020-07-21",
+      "deposit": 200000,
+      "totalMoney": 1000000,
+      "customer": {
+        "id": "KH-0003",
+        "type": "Diamond",
+        "name": "Trương Đình Nghệ",
+        "birthday": "1990-02-27",
+        "gender": 1,
+        "idCard": "488645199",
+        "phone": "0373213122",
+        "email": "nghenhan2702@gmail.com",
+        "address": "K323/12 Ông Ích Khiêm, Vinh"
+      },
+      "employee": {
+        "id": "NV-0007",
+        "name": "Nguyễn Hữu Hà",
+        "birthday": "1993-01-01",
+        "idCard": "534323231",
+        "salary": 8000000,
+        "phone": "0941234553",
+        "email": "nhh0101@gmail.com",
+        "address": "4 Nguyễn Chí Thanh, Huế",
+        "position": {
+          "id": 2,
+          "name": "Phục vụ"
+        },
+        "educationDegree": {
+          "id": 3,
+          "name": "Đại Học"
+        },
+        "division": {
+          "id": 2,
+          "name": "Hành chính"
+        }
+      },
+      "facility": {
+        "id": "DV-0001",
+        "name": "Villa Beach Front",
+        "area": 25000,
+        "cost": 10000000,
+        "maxPeople": 10,
+        "rentType": "Room",
+        "serviceType": "Year",
+        "standardRoom": "Vip",
+        "description": "Có hồ bơi",
+        "poolArea": 500,
+        "numberOfFloor": 4,
+        "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+      }
+    },
+    {
+      "id": "HD-0003",
+      "startDate": "2021-03-15",
+      "endDate": "2021-03-17",
+      "deposit": 50000,
+      "totalMoney": 700000,
+      "customer": {
+        "id": "KH-0004",
+        "type": "Diamond",
+        "name": "Dương Văn Quan",
+        "birthday": "1981-07-08",
+        "gender": 1,
+        "idCard": "543432111",
+        "phone": "0490039241",
+        "email": "duongquan@gmail.com",
+        "address": "K453/12 Lê Lợi, Đà Nẵng"
+      },
+      "employee": {
+        "id": "NV-0003",
+        "name": "Hồ Thị Yến",
+        "birthday": "1995-12-12",
+        "idCard": "999231723",
+        "salary": 14000000,
+        "phone": "0412352315",
+        "email": "thiyen@gmail.com",
+        "address": "K234/11 Điện Biên Phủ, Gia Lai",
+        "position": {
+          "id": 1,
+          "name": "Lễ tân"
+        },
+        "educationDegree": {
+          "id": 3,
+          "name": "Đại Học"
+        },
+        "division": {
+          "id": 2,
+          "name": "Hành chính"
+        }
+      },
+      "facility": {
+        "id": "DV-0002",
+        "name": "House Princess 01",
+        "area": 14000,
+        "cost": 5000000,
+        "maxPeople": 7,
+        "rentType": "House",
+        "serviceType": "Month",
+        "standardRoom": "Vip",
+        "description": "Có thêm bếp nướng",
+        "poolArea": 500,
+        "numberOfFloor": 3,
+        "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F-370x239.jpg"
+      }
+    },
+    {
+      "id": "HD-0004",
+      "startDate": "2021-01-14",
+      "endDate": "2021-01-18",
+      "deposit": 100000,
+      "totalMoney": 5000000,
+      "customer": {
+        "id": "KH-0005",
+        "type": "Silver",
+        "name": "Hoàng Trần Nhi Nhi",
+        "birthday": "1995-12-09",
+        "gender": 0,
+        "idCard": "795453345",
+        "phone": "0312345678",
+        "email": "nhinhi123@gmail.com",
+        "address": "224 Lý Thái Tổ, Gia Lai"
+      },
+      "employee": {
+        "id": "NV-0007",
+        "name": "Nguyễn Hữu Hà",
+        "birthday": "1993-01-01",
+        "idCard": "534323231",
+        "salary": 8000000,
+        "phone": "0941234553",
+        "email": "nhh0101@gmail.com",
+        "address": "4 Nguyễn Chí Thanh, Huế",
+        "position": {
+          "id": 2,
+          "name": "Phục vụ"
+        },
+        "educationDegree": {
+          "id": 3,
+          "name": "Đại Học"
+        },
+        "division": {
+          "id": 2,
+          "name": "Hành chính"
+        }
+      },
+      "facility": {
+        "id": "DV-0005",
+        "name": "House Princess 02",
+        "area": 10000,
+        "cost": 4000000,
+        "maxPeople": 5,
+        "rentType": "House",
+        "serviceType": "Month",
+        "standardRoom": "Normal",
+        "description": "Có thêm bếp nướng",
+        "poolArea": 300,
+        "numberOfFloor": 2,
+        "image": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Garden-Deluxe-twin-bed-F-370x239.jpg"
+      }
+    },
+    {
+      "id": "HD-0005",
+      "startDate": "2021-07-14",
+      "endDate": "2021-07-15",
+      "deposit": 0,
+      "totalMoney": 500000,
+      "customer": {
+        "id": "KH-0002",
+        "type": "Gold",
+        "name": "Phạm Xuân Diệu",
+        "birthday": "1992-08-08",
+        "gender": 1,
+        "idCard": "865342123",
+        "phone": "0954333333",
+        "email": "xuandieu92@gmail.com",
+        "address": "K77/22 Thái Phiên, Quảng Trị"
+      },
+      "employee": {
+        "id": "NV-0007",
+        "name": "Nguyễn Hữu Hà",
+        "birthday": "1993-01-01",
+        "idCard": "534323231",
+        "salary": 8000000,
+        "phone": "0941234553",
+        "email": "nhh0101@gmail.com",
+        "address": "4 Nguyễn Chí Thanh, Huế",
+        "position": {
+          "id": 2,
+          "name": "Phục vụ"
+        },
+        "educationDegree": {
+          "id": 3,
+          "name": "Đại Học"
+        },
+        "division": {
+          "id": 2,
+          "name": "Hành chính"
+        }
+      },
+      "facility": {
+        "id": "DV-0006",
+        "name": "Room Twin 02",
+        "area": 3000,
+        "cost": 900000,
+        "maxPeople": 2,
+        "rentType": "Room",
+        "serviceType": "Day",
+        "standardRoom": "Normal",
+        "description": "Có tivi",
+        "poolArea": 300,
+        "numberOfFloor": 2,
+        "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Presidential-Suite-F-370x239.jpg"
+      }
+    }
+  ]
+}

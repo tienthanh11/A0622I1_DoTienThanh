@@ -31,11 +31,15 @@ export class ContractCreateComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
-    this.customers = this.customerService.getAllCustomer();
+    this.customerService.getAllCustomer().subscribe((data) => {
+      this.customers = data;
+    });
 
     this.employees = this.employeeService.getAllEmployee();
 
-    this.facilities = this.facilityService.getAllFacility();
+    this.facilityService.getAllFacility().subscribe((data) => {
+      this.facilities = data;
+    });
 
     this.contractFormCreate = new FormGroup({
       id: new FormControl('', [Validators.required, Validators.pattern('^HD-\\d{4}$')]),

@@ -1,39 +1,35 @@
 import {Injectable} from '@angular/core';
 import {IFacility} from "../model/ifacility";
-import {FacilityDAO} from "../data/FacilityDAO";
+import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class FacilityService {
 
+  readonly URI: string = 'http://localhost:3000/facilities'
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
   }
 
-  getAllFacility() {
-    return FacilityDAO.facilities;
+  getAllFacility(): Observable<IFacility[]> {
+    return this.httpClient.get<IFacility[]>(this.URI);
   }
 
-  createFacility(facility: IFacility) {
-    FacilityDAO.facilities.push(facility);
+  createFacility(facility: IFacility): Observable<void> {
+    return this.httpClient.post<void>(this.URI, facility);
   }
 
-  findByIdFacility(id: string) {
-    return FacilityDAO.facilities.find(facility => facility.id === id);
+  findByIdFacility(id: string): Observable<IFacility> {
+    return this.httpClient.get(this.URI + '/' + id);
   }
 
-  updateFacility(id: string, facility: IFacility) {
-    for (let i = 0; i < FacilityDAO.facilities.length; i++) {
-      if (FacilityDAO.facilities[i].id === id) {
-        FacilityDAO.facilities[i] = facility;
-      }
-    }
+  updateFacility(id: string, facility: IFacility): Observable<IFacility> {
+    return this.httpClient.put<IFacility>(`${this.URI}/${id}`, facility);
   }
 
   deleteFacility(id: string) {
-    FacilityDAO.facilities = FacilityDAO.facilities.filter(facility => {
-      return facility.id !== id;
-    })
+    return this.httpClient.delete<void>(this.URI + '/' + id);
   }
 }

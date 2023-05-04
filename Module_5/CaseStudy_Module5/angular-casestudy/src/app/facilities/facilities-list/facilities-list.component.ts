@@ -20,7 +20,9 @@ export class FacilitiesListComponent implements OnInit {
   }
 
   getAll() {
-    this.facilities = this.facilityService.getAllFacility();
+    this.facilityService.getAllFacility().subscribe((data) => {
+      this.facilities = data;
+    });
   }
 
   showInfo(facility: IFacility) {

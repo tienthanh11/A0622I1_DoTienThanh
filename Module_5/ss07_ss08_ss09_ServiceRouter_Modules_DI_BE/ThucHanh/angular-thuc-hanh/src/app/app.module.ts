@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TimelinesComponent } from './timelines/timelines.component';
 import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
+import {GalleryConfig} from "./image-gallery/token";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { YoutubePlayerComponent } from './youtube-player/youtube-player.componen
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide: GalleryConfig, useValue: 3}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
