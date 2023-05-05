@@ -9,11 +9,15 @@ import {ContractService} from "../../service/contract.service";
 })
 export class ContractListComponent implements OnInit {
 
+  page: number = 1;
   contracts: IContract[] = [];
 
   constructor(private contractService: ContractService) { }
 
   ngOnInit(): void {
-    this.contracts = this.contractService.getAllContract();
+    this.contractService.getAllContract().subscribe((data) => {
+      this.contracts = data;
+    });
   }
 }
+

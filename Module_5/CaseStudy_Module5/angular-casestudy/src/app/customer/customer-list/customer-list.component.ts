@@ -4,6 +4,7 @@ import {CustomerTypeService} from "../../service/customer-type.service";
 import {CustomerService} from "../../service/customer.service";
 import {ICustomer} from "../../model/icustomer";
 import {ToastrService} from "ngx-toastr";
+import {FormControl, FormGroup} from "@angular/forms";
 
 
 @Component({
@@ -18,6 +19,9 @@ export class CustomerListComponent implements OnInit {
   customerDelete: ICustomer = {
     type: {}
   };
+  page: number = 1;
+  totalLength: number;
+  customerSearch: FormGroup;
 
   constructor(private customerService: CustomerService,
               private customerTypeService: CustomerTypeService,
@@ -25,12 +29,18 @@ export class CustomerListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.customerSearch = new FormGroup({
+      name: new FormControl(''),
+      email: new FormControl(''),
+      typeId: new FormControl('')
+    });
     this.getAll();
   }
 
   getAll() {
     this.customerService.getAllCustomer().subscribe((data) => {
       this.customers = data;
+      this.totalLength = data.length;
     });
 
     this.customerTypeService.getAllCustomerType().subscribe((data) => {
@@ -51,6 +61,20 @@ export class CustomerListComponent implements OnInit {
       () => {
         this.toast.success("Xóa khách hàng thành công");
         this.getAll();
+      }
+    );
+  }
+
+  searchCustomer() {
+    this.customerService.searchCustomer(
+      this.customerSearch.get('name').value.trim(),
+      this.customerSearch.get('email').value.trim(),
+      this.customerSearch.get('typeId').value.trim()
+    ).subscribe(
+      (data) => {
+        this.customers = data;
+        this.totalLength = data.length;
+        this.page = 1;
       }
     );
   }

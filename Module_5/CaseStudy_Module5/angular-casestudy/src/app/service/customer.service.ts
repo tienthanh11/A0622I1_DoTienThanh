@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {CustomerDAO} from "../data/CustomerDAO";
 import {ICustomer} from "../model/icustomer";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
@@ -30,7 +29,11 @@ export class CustomerService {
     return this.httpClient.put<ICustomer>(`${this.URI}/${id}`, customer);
   }
 
-  deleteCustomer(id: string): Observable<void>{
+  deleteCustomer(id: string): Observable<void> {
     return this.httpClient.delete<void>(this.URI + '/' + id);
+  }
+
+  searchCustomer(name: string, email: string, typeId: string): Observable<ICustomer[]> {
+    return this.httpClient.get<ICustomer[]>(this.URI + '?name_like=' + name + '&email_like=' + email + '&type.id_like=' + typeId);
   }
 }

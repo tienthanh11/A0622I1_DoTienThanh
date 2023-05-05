@@ -1,19 +1,23 @@
-import { Injectable } from '@angular/core';
-import {DivisionDAO} from "../data/DivisionDAO";
-import {EducationDegreeDAO} from "../data/EducationDegreeDAO";
+import {Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {IDivision} from "../model/idivision";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DivisionService {
 
-  constructor() { }
+  readonly URI: string = 'http://localhost:3000/divisions'
 
-  getAllDivision() {
-    return DivisionDAO.divisions;
+  constructor(private httpClient: HttpClient) {
   }
 
-  findByIdDivision(id: string) {
-    return DivisionDAO.divisions.find(division => division.id === +id);
+  getAllDivision(): Observable<IDivision[]> {
+    return this.httpClient.get<IDivision[]>(this.URI);
+  }
+
+  findByIdDivision(id: string): Observable<IDivision> {
+    return this.httpClient.get<IDivision>(this.URI + '/' + id);
   }
 }

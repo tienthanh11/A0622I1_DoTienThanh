@@ -19,7 +19,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let contract of contracts, index as i">
+        <tr *ngFor="let contract of contracts | paginate: {itemsPerPage: 3, currentPage: page}, index as i">
           <td>{{i + 1}}</td>
           <td>{{contract.id}}</td>
           <td>{{contract.startDate | date: 'dd/MM/yyyy'}}</td>
@@ -33,5 +33,8 @@
         </tbody>
       </table>
     </div>
+  </div>
+  <div class="d-flex justify-content-center align-content-center">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
   </div>
 </div>

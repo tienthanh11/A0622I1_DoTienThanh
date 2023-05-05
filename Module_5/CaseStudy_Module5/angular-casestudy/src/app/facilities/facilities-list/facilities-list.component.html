@@ -9,7 +9,7 @@
 
 <!--+++++++++++++++++++++content+++++++++++++++++++++-->
 <div style="display: flex; justify-content: center; width: 100%" class="row">
-  <div class="mx-5 mt-5" *ngFor="let facility of facilities">
+  <div class="mx-5 mt-5" *ngFor="let facility of facilities | slice: 0 : page * 3">
     <div class="card border-0">
       <img [src]="facility.image" class="card-img-top" alt="..." style="width: 336px; height: 236px">
       <div class="card-body intro">
@@ -24,6 +24,12 @@
       </div>
     </div>
   </div>
+  <div style="z-index: 1; width: 100%; display: block">
+    <button style="position: absolute; right: 50%; transform: translateX(50%)" class="btn btn-success mt-5"
+            *ngIf="page * 3 < facilities.length" (click)="page = page + 1">
+      See More...
+    </button>
+  </div>
 </div>
 
 <!-- Delete Modal -->
@@ -36,46 +42,6 @@
       </div>
       <div class="modal-body">
         <h4 class="text-primary">Thông tin trước khi xoá</h4>
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Name</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.name}}</span>-->
-        <!--        </div>-->
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Area</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.area}}</span>-->
-        <!--        </div>-->
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Cost</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.cost}}</span>-->
-        <!--        </div>-->
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Max People</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.maxPeople}}</span>-->
-        <!--        </div>-->
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Rent Type</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.rentType}}</span>-->
-        <!--        </div>-->
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Service Type</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.serviceType}}</span>-->
-        <!--        </div>-->
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Standard Room</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.standardRoom}}</span>-->
-        <!--        </div>-->
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Description</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.description}}</span>-->
-        <!--        </div>-->
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Pool Area</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.poolArea}}</span>-->
-        <!--        </div>-->
-        <!--        <div class="my-3">-->
-        <!--          <span class="input-group-text" style="display: unset">Number Of Floor</span>-->
-        <!--          <span class="ml-3"> {{facilityDelete.numberOfFloor}}</span>-->
-        <!--        </div>-->
         <table class="table table-bordered">
           <tr class="my-3">
             <td><span class="input-group-text me-2">ID</span></td>

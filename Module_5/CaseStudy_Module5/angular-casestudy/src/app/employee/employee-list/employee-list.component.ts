@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IEmployee} from "../../model/iemployee";
 import {IPosition} from "../../model/iposition";
 import {IEducationDegree} from "../../model/ieducation-degree";
@@ -7,6 +7,8 @@ import {EmployeeService} from "../../service/employee.service";
 import {PositionService} from "../../service/position.service";
 import {EducationDegreeService} from "../../service/education-degree.service";
 import {DivisionService} from "../../service/division.service";
+import {ToastrService} from "ngx-toastr";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-employee-list',
@@ -23,25 +25,44 @@ export class EmployeeListComponent implements OnInit {
     position: {},
     educationDegree: {},
     division: {}
-  }
+  };
+  page: number = 1;
+  totalLength: number;
+  employeeSearch: FormGroup;
 
   constructor(private employeeService: EmployeeService,
               private positionService: PositionService,
               private educationDegreeService: EducationDegreeService,
-              private divisionService: DivisionService) { }
+              private divisionService: DivisionService,
+              private toast: ToastrService) {
+  }
 
   ngOnInit(): void {
+    this.employeeSearch = new FormGroup({
+      name: new FormControl(''),
+      email: new FormControl(''),
+      divisionId: new FormControl('')
+    })
     this.getAll();
   }
 
   getAll() {
-    this.employees = this.employeeService.getAllEmployee();
+    this.employeeService.getAllEmployee().subscribe((data) => {
+      this.employees = data;
+      this.totalLength = data.length;
+    });
 
-    this.positions = this.positionService.getAllPosition();
+    this.positionService.getAllPosition().subscribe((data) => {
+      this.positions = data;
+    });
 
-    this.educationDegrees = this.educationDegreeService.getAllEducationDegree();
+    this.educationDegreeService.getAllEducationDegree().subscribe((data) => {
+      this.educationDegrees = data;
+    });
 
-    this.divisions = this.divisionService.getAllDivision();
+    this.divisionService.getAllDivision().subscribe((data) => {
+      this.divisions = data;
+    });
   }
 
   showInfo(employee: IEmployee) {
@@ -49,8 +70,29 @@ export class EmployeeListComponent implements OnInit {
   }
 
   delete(id: string) {
-    this.employeeService.deleteEmployee(id);
-    alert("Xóa nhân viên thành công");
-    this.getAll();
+    this.employeeService.deleteEmployee(id).subscribe(
+      () => {
+      },
+      () => {
+      },
+      () => {
+        this.toast.success("Xóa nhân viên thành công");
+        this.getAll();
+      }
+    );
+  }
+
+  searchEmployee() {
+    this.employeeService.searchEmployee(
+      this.employeeSearch.get('name').value.trim(),
+      this.employeeSearch.get('email').value.trim(),
+      this.employeeSearch.get('divisionId').value.trim()
+    ).subscribe(
+      (data) => {
+        this.employees = data;
+        this.totalLength = data.length;
+        this.page = 1;
+      }
+    )
   }
 }

@@ -545,20 +545,6 @@
       "poolArea": 500,
       "numberOfFloor": 3,
       "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-F-370x239.jpg"
-    },
-    {
-      "id": "DV-0010",
-      "name": "Villia Pro Vip 01",
-      "area": "100",
-      "cost": 5000000,
-      "maxPeople": 3,
-      "rentType": "Villa",
-      "serviceType": "Month",
-      "standardRoom": "Vip",
-      "description": "có điều hòa, hồ bơi, điều kiện đầy đủ",
-      "poolArea": 500,
-      "numberOfFloor": 6,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRffaTy1Qb5g8-SW8ed9bJ0dFiCTN96uDpRzZNXY1jp&s"
     }
   ],
   "contracts": [

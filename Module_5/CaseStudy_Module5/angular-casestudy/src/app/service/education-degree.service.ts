@@ -1,18 +1,22 @@
 import { Injectable } from '@angular/core';
-import {EducationDegreeDAO} from "../data/EducationDegreeDAO";
+import {Observable} from "rxjs";
+import {IEducationDegree} from "../model/ieducation-degree";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducationDegreeService {
 
-  constructor() { }
+  readonly URI: string = 'http://localhost:3000/educationDegrees'
 
-  getAllEducationDegree() {
-    return EducationDegreeDAO.educationDegrees;
+  constructor(private httpClient: HttpClient) { }
+
+  getAllEducationDegree(): Observable<IEducationDegree[]>{
+    return this.httpClient.get<IEducationDegree[]>(this.URI);
   }
 
-  findByIdEducationDegree(id: string) {
-    return EducationDegreeDAO.educationDegrees.find(educationDegree => educationDegree.id === +id);
+  findByIdEducationDegree(id: string): Observable<IEducationDegree>{
+    return this.httpClient.get<IEducationDegree>(this.URI + '/' + id);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {IPosition} from "../../model/iposition";
 import {IEducationDegree} from "../../model/ieducation-degree";
@@ -8,6 +8,7 @@ import {PositionService} from "../../service/position.service";
 import {EducationDegreeService} from "../../service/education-degree.service";
 import {DivisionService} from "../../service/division.service";
 import {Router} from "@angular/router";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-employee-create',
@@ -25,14 +26,22 @@ export class EmployeeCreateComponent implements OnInit {
               private positionService: PositionService,
               private educationDegreeService: EducationDegreeService,
               private divisionService: DivisionService,
-              private router: Router) { }
+              private router: Router,
+              private toast: ToastrService) {
+  }
 
   ngOnInit(): void {
-    this.positions = this.positionService.getAllPosition();
+    this.positionService.getAllPosition().subscribe((data) => {
+      this.positions = data;
+    });
 
-    this.educationDegrees = this.educationDegreeService.getAllEducationDegree();
+    this.educationDegreeService.getAllEducationDegree().subscribe((data) => {
+      this.educationDegrees = data;
+    });
 
-    this.divisions = this.divisionService.getAllDivision();
+    this.divisionService.getAllDivision().subscribe((data) => {
+      this.divisions = data;
+    });
 
     this.employeeFormCreate = new FormGroup({
       id: new FormControl('', [Validators.required, Validators.pattern('^NV-\\d{4}$')]),
@@ -50,7 +59,15 @@ export class EmployeeCreateComponent implements OnInit {
   }
 
   createEmployee() {
-    this.employeeService.createEmployee(this.employeeFormCreate.value);
-    this.router.navigateByUrl('employee/list');
+    this.employeeService.createEmployee(this.employeeFormCreate.value).subscribe(
+      () => {
+      },
+      () => {
+      },
+      () => {
+        this.toast.success("Thêm mới nhân viên thành công");
+        this.router.navigateByUrl('employee/list');
+      }
+    );
   }
 }
