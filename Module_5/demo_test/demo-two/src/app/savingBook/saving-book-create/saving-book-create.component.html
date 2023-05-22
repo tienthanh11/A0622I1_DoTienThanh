@@ -1,0 +1,93 @@
+<div class="container mt-5">
+  <h1 class="font-text-footer" style="text-align: -webkit-center">Create Saving Book</h1>
+  <form [formGroup]="savingBookFormCreate" (ngSubmit)="createSavingBook()">
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="savingBookFormCreate.get('id').invalid && (savingBookFormCreate.get('id').touched||savingBookFormCreate.get('id').dirty)">
+      Ma So không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Ma So</span>
+      <input type="text" class="form-control me-2" placeholder="Ma So" formControlName="id">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="savingBookFormCreate.get('customer').invalid && (savingBookFormCreate.get('customer').touched||savingBookFormCreate.get('customer').dirty)">
+      Ma Khach Hang không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Mã Khách Hàng</span>
+      <select class="form-select me-2" formControlName="customer">
+        <option selected disabled value='null'>Choose</option>
+        <option *ngFor="let customer of customers" [ngValue]="customer">
+          {{customer.id}}
+        </option>
+      </select>
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="savingBookFormCreate.get('customer').invalid && (savingBookFormCreate.get('customer').touched||savingBookFormCreate.get('customer').dirty)">
+      Ten Khach Hang không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Ten Khách Hàng</span>
+      <select class="form-select me-2" formControlName="customer">
+        <option selected disabled>Choose</option>
+        <option *ngFor="let customer of customers" [ngValue]="customer">
+          {{customer.name}}
+        </option>
+      </select>
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="savingBookFormCreate.get('openingDay').invalid && (savingBookFormCreate.get('openingDay').touched||savingBookFormCreate.get('openingDay').dirty)">
+      Ngay Ma So không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Ngay Ma So</span>
+      <input type="date" class="form-control me-2" placeholder="Ngay Ma So" formControlName="openingDay">
+    </div>
+
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="savingBookFormCreate.get('startDay').invalid && (savingBookFormCreate.get('startDay').touched||savingBookFormCreate.get('startDay').dirty)">
+      Thoi gian bat dau không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Thoi gian bat dau</span>
+      <input type="date" class="form-control me-2" placeholder="Thoi gian bat dau" formControlName="startDay">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="savingBookFormCreate.get('period').invalid && (savingBookFormCreate.get('period').touched||savingBookFormCreate.get('period').dirty)">
+      Ki Hang không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Ki Hang</span>
+      <input type="text" class="form-control me-2" placeholder="Ki Hang" formControlName="period">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="savingBookFormCreate.get('deposit').invalid && (savingBookFormCreate.get('deposit').touched||savingBookFormCreate.get('deposit').dirty)">
+      So tien goi không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">So tien goi</span>
+      <input type="text" class="form-control me-2" placeholder="So tien goi" formControlName="deposit">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="savingBookFormCreate.get('interestRate').invalid && (savingBookFormCreate.get('interestRate').touched||savingBookFormCreate.get('interestRate').dirty)">
+      Lai suat không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Lai suat</span>
+      <input type="text" class="form-control me-2" placeholder="Lai suat" formControlName="interestRate">
+    </div>
+
+    <br>
+    <div class="input-group d-flex align-content-center justify-content-center">
+      <button type="submit" class="btn btn-primary" [disabled]="savingBookFormCreate.invalid">Create</button>
+      <button type="button" class="btn btn-danger ms-3" routerLink="">Quay lại</button>
+    </div>
+  </form>
+</div>

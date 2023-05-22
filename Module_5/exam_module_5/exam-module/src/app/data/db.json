@@ -1,0 +1,38 @@
+{
+  "mua-bans": [
+    {
+      "id": 1,
+      "danhMuc": "Nhà Đất",
+      "vungMien": "Tp Hồ Chí Minh",
+      "donVi": "Cá Nhân",
+      "dangTin": "Cá Nhân",
+      "trinhTrang": "Mới",
+      "diaChi": "Quận Gò Vấp, TP HCM",
+      "dienTich": 64,
+      "huong": "Đông Nam",
+      "tieuDe": "Căn bản 1 căn hộ thuộc khu chung cư",
+      "noiDung": "Căn hộ Hiệp Thành ...",
+      "gia": 600000000,
+      "hinhAnh": "abc.jpg",
+      "ngayDang": "2017-02-28",
+      "trangThai": "Đang rao"
+    },
+    {
+      "id": 2,
+      "danhMuc": "Nhà Ở",
+      "vungMien": "Tp Đà Nẵng",
+      "donVi": "Công Ty",
+      "dangTin": "Cẩn Mua",
+      "trinhTrang": "Đã sử dụng",
+      "diaChi": "Đà Nẵng",
+      "dienTich": 32,
+      "huong": "Đông",
+      "tieuDe": "Căn bản 1 căn hộ thuộc khu chung cư",
+      "noiDung": "Căn hộ Bắc Sơn ...",
+      "gia": 800000000,
+      "hinhAnh": "abc.jpg",
+      "ngayDang": "2017-02-28",
+      "trangThai": "Chưa duyệt"
+    }
+  ]
+}

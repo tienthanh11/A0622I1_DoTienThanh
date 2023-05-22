@@ -1,0 +1,116 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sting",
+      "address": "Đà Nẵng",
+      "cost": 250000,
+      "currency": "Thùng"
+    },
+    {
+      "id": 2,
+      "name": "Tiger",
+      "address": "Hội An",
+      "cost": 220000,
+      "currency": "Thùng"
+    },
+    {
+      "id": 3,
+      "name": "Oshi",
+      "address": "Quảng Nam",
+      "cost": 100000,
+      "currency": "Thùng"
+    },
+    {
+      "id": 4,
+      "name": "Đầu gội",
+      "address": "Sài Gòn",
+      "cost": 300000,
+      "currency": "Thùng"
+    },
+    {
+      "id": 5,
+      "name": "Larue",
+      "address": "Hà Nội",
+      "cost": 210000,
+      "currency": "Thùng"
+    }
+  ],
+  "packages": [
+    {
+      "id": 1,
+      "idPackage": "LH-0001",
+      "product": {
+        "id": 1,
+        "name": "Sting",
+        "address": "Đà Nẵng",
+        "cost": 250000,
+        "currency": "Thùng"
+      },
+      "quantity": 5,
+      "dateProduct": "2020-12-28",
+      "startDate": "2020-09-10",
+      "endDate": "2021-09-10"
+    },
+    {
+      "id": 2,
+      "idPackage": "LH-0002",
+      "product": {
+        "id": 2,
+        "name": "Tiger",
+        "address": "Hội An",
+        "cost": 220000,
+        "currency": "Thùng"
+      },
+      "quantity": 5,
+      "dateProduct": "2020-11-01",
+      "startDate": "2020-10-15",
+      "endDate": "2021-10-15"
+    },
+    {
+      "id": 3,
+      "idPackage": "LH-0003",
+      "product": {
+        "id": 3,
+        "name": "Oshi",
+        "address": "Quảng Nam",
+        "cost": 100000,
+        "currency": "Thùng"
+      },
+      "quantity": 5,
+      "dateProduct": "2020-12-01",
+      "startDate": "2020-09-14",
+      "endDate": "2021-09-14"
+    },
+    {
+      "id": 4,
+      "idPackage": "LH-0004",
+      "product": {
+        "id": 4,
+        "name": "Đầu gội",
+        "address": "Sài Gòn",
+        "cost": 300000,
+        "currency": "Thùng"
+      },
+      "quantity": 5,
+      "dateProduct": "2020-12-28",
+      "startDate": "2020-09-10",
+      "endDate": "2021-09-10"
+    },
+    {
+      "id": 5,
+      "idPackage": "LH-0005",
+      "product": {
+        "id": 5,
+        "name": "Larue",
+        "address": "Hà Nội",
+        "cost": 210000,
+        "currency": "Thùng"
+      },
+      "quantity": 5,
+      "dateProduct": "2020-12-28",
+      "startDate": "2020-09-10",
+      "endDate": "2021-09-10"
+    }
+  ]
+}

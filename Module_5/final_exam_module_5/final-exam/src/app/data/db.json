@@ -1,0 +1,28 @@
+{
+  "xes": [
+    {
+      "id": 1222,
+      "tenType": {
+        "id": 2,
+        "name": "Ghế ngồi"
+      },
+      "tenNhaXe": "Hoàng Long",
+      "diemDi": "Hà Nội",
+      "diemDen": "Hà Nội",
+      "soDienThoai": "0939574122",
+      "email": "hoanglong@gmail.com",
+      "gioDi": "10:20",
+      "gioDen": "13:00"
+    }
+  ],
+  "xe-types": [
+    {
+      "id": 1,
+      "name": "Giường nằm"
+    },
+    {
+      "id": 2,
+      "name": "Ghế ngồi"
+    }
+  ]
+}

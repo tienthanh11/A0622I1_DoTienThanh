@@ -1,0 +1,64 @@
+<div class="container">
+  <div>
+    <h1 class="font-text-footer" style="text-align: -webkit-center;">Danh sách mua bán</h1>
+    <br>
+    <!--++++++++++++++++search++++++++++++++++-->
+    <form [formGroup]="muaBanSearch" (ngSubmit)="search()" class="mb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-text">Diện tích</span>
+              <input type="text" class="form-control me-2" placeholder="Diện tích" formControlName="dienTich">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-text">Hướng</span>
+              <select class="form-select me-2" formControlName="huong">
+                <option value="" disabled>Choose</option>
+                <option value="Đông">Đông</option>
+                <option value="Đông Nam">Đông Nam</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-text">Giá</span>
+              <input type="text" class="form-control me-2" placeholder="Giá" formControlName="gia">
+            </div>
+          </div>
+          <div class="col-md-1">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <br>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+        <button type="button" class="btn btn-secondary" routerLink="/muaBan/create">Tạo mua bán</button>
+        <tr>
+          <th>STT</th>
+          <th>Tiêu đề</th>
+          <th>Danh mục</th>
+          <th>Đơn vị</th>
+          <th>Ngày đăng</th>
+          <th>Trang thái</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let muaBan of muaBans, index as i">
+          <td>{{i + 1}}</td>
+          <td>{{muaBan.tieuDe}}</td>
+          <td>{{muaBan.danhMuc}}</td>
+          <td>{{muaBan.donVi}}</td>
+          <td>{{muaBan.ngayDang |date:"dd/MM/yyyy"}}</td>
+          <td>{{muaBan.trangThai}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,7 @@ import {Observable} from "rxjs";
 export class CustomerService {
 
   readonly URI: string = 'http://localhost:3000/customers'
+  // readonly URI: string = 'http://localhost:8080'
 
   constructor(private httpClient: HttpClient) {
   }

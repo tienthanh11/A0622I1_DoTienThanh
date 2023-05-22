@@ -1,0 +1,132 @@
+<div class="container mt-5">
+  <h1 class="font-text-footer" style="text-align: -webkit-center">Nhà Đất</h1>
+  <form [formGroup]="muaBanForm" (ngSubmit)="createMuaBan()">
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Danh Mục</span>
+      <select class="form-select me-2" formControlName="danhMuc">
+        <option value="" disabled>Choose</option>
+        <option value="Nhà Đất">Nhà Đất</option>
+        <option value="Nhà Chung Cư">Nhà Chung Cư</option>
+      </select>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Vùng Miền</span>
+      <select class="form-select me-2" formControlName="vungMien">
+        <option value="" disabled>Choose</option>
+        <option value="Hà Nội">Hà Nội</option>
+        <option value="Đà Nẵng">Đà Nẵng</option>
+        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+      </select>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Bạn là</span>
+      <select class="form-select me-2" formControlName="donVi">
+        <option value="" disabled>Choose</option>
+        <option value="Cá Nhân">Cá Nhân</option>
+        <option value="Công Ty">Công Ty</option>
+      </select>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Bạn đăng tin</span>
+      <select class="form-select me-2" formControlName="dangTin">
+        <option value="" disabled>Choose</option>
+        <option value="Cần bán">Cần bán</option>
+        <option value="Cần mua">Cần mua</option>
+        <option value="Cho thuê">Cho thuê</option>
+        <option value="Cần thuê">Cần thuê</option>
+      </select>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Trình trạng</span>
+      <select class="form-select me-2" formControlName="trinhTrang">
+        <option value="" disabled>Choose</option>
+        <option value="Mới">Mới</option>
+        <option value="Đã sử dụng">Đã sử dụng</option>
+      </select>
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="muaBanForm.get('diaChi').invalid && (muaBanForm.get('diaChi').touched||muaBanForm.get('diaChi').dirty)">
+      Địa chỉ không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Địa chỉ</span>
+      <input type="text" class="form-control me-2" placeholder="Địa chỉ" formControlName="diaChi">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="muaBanForm.get('dienTich').invalid && (muaBanForm.get('dienTich').touched||muaBanForm.get('dienTich').dirty)">
+      Diện tích phải là số thực và lớn hơn 20m2
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Diện tích</span>
+      <input type="text" class="form-control me-2" placeholder="Diện tích" formControlName="dienTich">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Hướng</span>
+      <select class="form-select me-2" formControlName="huong">
+        <option value="" disabled>Choose</option>
+        <option value="Đông">Đông</option>
+        <option value="Đông Nam">Đông Nam</option>
+      </select>
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="muaBanForm.get('tieuDe').invalid && (muaBanForm.get('tieuDe').touched||muaBanForm.get('tieuDe').dirty)">
+      Tiểu đề không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Tiểu đề <span class="text-danger"> (*)</span></span>
+      <input type="text" class="form-control me-2" placeholder="Tiểu đề" formControlName="tieuDe">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="muaBanForm.get('noiDung').invalid && (muaBanForm.get('noiDung').touched||muaBanForm.get('noiDung').dirty)">
+      Nội dung không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Nội dung <span class="text-danger"> (*)</span></span>
+      <input type="text" class="form-control me-2" placeholder="Nội dung" formControlName="noiDung">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="muaBanForm.get('gia').invalid && (muaBanForm.get('gia').touched||muaBanForm.get('gia').dirty)">
+      Giá phải là số và lớn hơn 100.000.000 VNĐ
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Giá <span class="text-danger"> (*)</span></span>
+      <input type="number" class="form-control me-2" placeholder="Giá" formControlName="gia">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Hình ảnh</span>
+      <input type="text" class="form-control me-2" placeholder="Hình ảnh" formControlName="hinhAnh">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Ngày dăng</span>
+      <input type="date" class="form-control me-2" placeholder="Ngày dăng" formControlName="ngayDang">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Trạng thái</span>
+      <select class="form-select me-2" formControlName="trangThai">
+        <option value="" disabled>Choose</option>
+        <option value="Đang rao">Đang rao</option>
+        <option value="Chưa duyệt">Chưa duyệt</option>
+      </select>
+    </div>
+
+    <br>
+    <div class="input-group d-flex align-content-center justify-content-center">
+      <button type="submit" class="btn btn-primary" [disabled]="muaBanForm.invalid">Xác nhận</button>
+      <button type="button" class="btn btn-danger ms-3" routerLink="">Quay lại</button>
+    </div>
+  </form>
+</div>

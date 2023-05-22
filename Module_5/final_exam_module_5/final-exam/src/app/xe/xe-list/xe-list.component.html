@@ -1,0 +1,71 @@
+<div class="container">
+  <div>
+    <h1 class="font-text-footer" style="text-align: -webkit-center;">Danh sách các xe đăng ký ở bến xe XYZ</h1>
+    <br>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+        <button type="button" class="btn btn-secondary" routerLink="/package/create">Thêm mới</button>
+        <tr>
+          <th>Số xe</th>
+          <th>Loại xe</th>
+          <th>Tên nhà xe</th>
+          <th>Điểm đi</th>
+          <th>Điểm đến</th>
+          <th>Số điện thoại</th>
+          <th>Email</th>
+          <th>Giờ đi</th>
+          <th>Giờ đến</th>
+          <th colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let xe of xes">
+          <th>{{xe.id}}</th>
+          <td>{{xe.tenType.name}}</td>
+          <td>{{xe.tenNhaXe}}</td>
+          <td>{{xe.diemDi}}</td>
+          <td>{{xe.diemDen}}</td>
+          <td>{{xe.soDienThoai}}</td>
+          <td>{{xe.email}}</td>
+          <td>{{xe.gioDi}}</td>
+          <td>{{xe.gioDen}}</td>
+          <td>
+            <button type="button" class="btn btn-outline-info" [routerLink]="['/xe/edit', xe.id]">Edit</button>
+          </td>
+          <td>
+            <button type="button" (click)="showInfo(xe)" class="btn btn-outline-danger" data-bs-toggle="modal"
+                    data-bs-target="#xeModal">
+              Delete
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="xeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="exampleModalLabel">Xác nhận xoá</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Bạn có chắc chắn xoá thông tin của xe khách có số xe {{xeDelete.id}}?</h3>
+      </div>
+      <div class="modal-footer">
+        <div style="position: absolute; left: 18px">
+          <h6 class="text-danger">Lưu ý! Hành động không thể hoàn tác!</h6>
+        </div>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete(xeDelete.id)">
+          Delete
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

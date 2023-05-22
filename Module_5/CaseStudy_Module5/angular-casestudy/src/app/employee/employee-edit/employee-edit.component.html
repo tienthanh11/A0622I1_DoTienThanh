@@ -8,7 +8,7 @@
           <h1 class="font-text-footer">Edit Employee</h1>
           <br>
           <div class="container-fluid p-0 align-content-center justify-content-center">
-            <form [formGroup]="employeeFormEdit" (ngSubmit)="editEmployee(id)">
+            <form [formGroup]="employeeFormEdit" (ngSubmit)="editEmployee(id)" *ngIf="employeeFormEdit">
               <small class="text-danger mb-0 pb-0"
                      *ngIf="employeeFormEdit.get('id').invalid && (employeeFormEdit.get('id').touched||employeeFormEdit.get('id').dirty)">
                 ID invalid!!

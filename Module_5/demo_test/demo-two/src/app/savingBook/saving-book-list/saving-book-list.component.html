@@ -1,0 +1,140 @@
+<div class="container">
+  <div>
+    <br>
+    <h1 class="font-text-footer" style="text-align: -webkit-center">Saving Book List</h1>
+    <br>
+    <!--+++++++++++++++++++++search+++++++++++++++++++++-->
+    <form [formGroup]="savingBookSearch" (ngSubmit)="search()" class="mb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-text">Name Customer Search</span>
+              <select class="form-select me-2" formControlName="name" style="width: auto">
+                <option selected value="">Choose</option>
+                <option *ngFor="let customer of customers" value="{{customer.id}}">
+                  {{customer.name}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-text">Start Day Search</span>
+              <input type="date" class="form-control me-2" placeholder="Start Day Search" formControlName="startDay">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-text">Deposit Search</span>
+              <input type="text" class="form-control me-2" placeholder="Deposit Search" formControlName="deposit">
+            </div>
+          </div>
+          <div class="col-md-1">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <br>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+        <button type="button" class="btn btn-outline-secondary" routerLink="/savingBook/create">Create</button>
+        <tr>
+          <th>Ma so</th>
+          <th>Ma Khach Hang</th>
+          <th>Ten Khach Hang</th>
+          <th>ngay Mo So</th>
+          <th>Thoi gian bat dau</th>
+          <th>Ki Hang</th>
+          <th>So tien goi</th>
+          <th>Lai suat</th>
+          <th colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let savingBook of savingBooks">
+          <td>{{savingBook.id}}</td>
+          <td>{{savingBook.customer.id}}</td>
+          <td>{{savingBook.customer.name}}</td>
+          <td>{{savingBook.openingDay | date: 'dd-MM-yyyy'}}</td>
+          <td>{{savingBook.startDay | date: 'dd-MM-yyyy'}}</td>
+          <td>{{savingBook.period}}</td>
+          <td>{{savingBook.deposit}} VNĐ</td>
+          <td>{{savingBook.interestRate}} %</td>
+          <td>
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/savingBook/edit', savingBook.id]">
+              Edit
+            </button>
+          </td>
+          <td>
+            <button type="button" (click)="showInfo(savingBook)" class="btn btn-outline-danger" data-bs-toggle="modal"
+                    data-bs-target="#savingBookModal">
+              Delete
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br><br>
+<!-- Delete Modal -->
+<div class="modal fade" id="savingBookModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="exampleModalLabel">Xác nhận xóa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-primary">Thông tin trước khi xóa</h4>
+        <table class="table table-bordered">
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Ma So</span></td>
+            <td><span class="ml-3"> {{savingBookDelete.id}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Ma Khach Hang</span></td>
+            <td><span class="ml-3"> {{savingBookDelete.customer.id}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Ten Khach Hang</span></td>
+            <td><span class="ml-3"> {{savingBookDelete.customer.name}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Ngay Mo So</span></td>
+            <td><span class="ml-3"> {{savingBookDelete.openingDay | date: "dd/MM/yyyy"}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Thoi gian bat dau</span></td>
+            <td><span class="ml-3"> {{savingBookDelete.startDay | date: "dd/MM/yyyy"}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Ki Hang</span></td>
+            <td><span class="ml-3"> {{savingBookDelete.period}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">So tien goi</span></td>
+            <td><span class="ml-3"> {{savingBookDelete.deposit}}</span></td>
+          </tr>
+          <tr class="my-3">
+            <td><span class="input-group-text me-2">Lai suat</span></td>
+            <td><span class="ml-3"> {{savingBookDelete.interestRate}}</span></td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <div style="position: absolute; left: 18px">
+          <h6 class="text-danger">Lưu ý! Hành động không thể hoàn tác!</h6>
+        </div>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete(savingBookDelete.id)">
+          Delete
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

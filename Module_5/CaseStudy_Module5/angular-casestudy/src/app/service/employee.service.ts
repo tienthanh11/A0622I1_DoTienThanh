@@ -35,6 +35,6 @@ export class EmployeeService {
   }
 
   searchEmployee(name: string, email: string, divisionId: string): Observable<IEmployee[]> {
-    return this.httpClient.get<ICustomer[]>(this.URI + '?name_like=' + name + '&email_like=' + email + '&division.id_like=' + divisionId);
+    return this.httpClient.get<IEmployee[]>(this.URI + '?name_like=' + name + '&email_like=' + email + '&division.id_like=' + divisionId);
   }
 }
